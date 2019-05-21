@@ -2,7 +2,7 @@ const variables = {
     colors: {
       acc: "#364159",
       base: "#121212",
-      background: "#ffffff", //#141c23
+      background: "#364159", //#141c23
       blackLight: "#313746",
       gray: "#727d86",
       silver: "#969fa7",
