@@ -8,13 +8,12 @@ const FooterContent = styled.footer`
 
 const FooterInner = styled.div`
     margin-top: 3em;
-    text-align： center;
+    text-align: center;
     padding: 1.5em;
     border-top: solid 1px ${props => props.theme.colors.blackLight};
     color: ${props => props.theme.colors.gray};
     font-size: 14px;
     a {
-        color: ;
         text-decoration: underline;
     }
 `;
@@ -24,9 +23,7 @@ const Footer = () => {
         <FooterContent>
             <ContentWrapper>
                 <FooterInner>
-                © {new Date().getFullYear()} 13imi, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+                    © {new Date().getFullYear()}, 13imi All rights reserved.
                 </FooterInner>
             </ContentWrapper>
         </FooterContent>
