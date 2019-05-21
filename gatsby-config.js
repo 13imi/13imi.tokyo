@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `13imi.tokyo`,
+    title: `13imi`,
     author: `13imi`,
     description: `@13imiの技術系のことを気軽に綴るサイトです`,
     siteUrl: `https://13imi.tokyo/`,
@@ -63,7 +63,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#364159`,
         display: `minimal-ui`,
-        icon: `content/assets/avatar.png`,
+        icon: `content/assets/avatar.jpg`,
       },
     },
     `gatsby-plugin-offline`,

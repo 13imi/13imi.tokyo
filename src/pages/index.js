@@ -21,7 +21,6 @@ class BlogIndex extends React.Component {
         />
 
         {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
           return <PostCard key={node.fields.slug} node={node} />;
         })}
                <Bio />
@@ -49,6 +48,7 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            emoji
             description
           }
         }

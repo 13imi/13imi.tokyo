@@ -14,6 +14,13 @@ const HeaderInner = styled.div`
     h1,
     h3 {
         width: 100%;
+        color: #fff;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    h3 {
+        font-size: 18px;
     }
 `;
 
