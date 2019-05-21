@@ -4,6 +4,7 @@ import { ThemeProvider } from "styled-components";
 import GlobalStyle from "../styles/global";
 import theme from "../styles/theme";
 import Header from "../components/Header"
+import Footer from "../components/Footer"
 import ContentWrapper from "../components/ContentWrapper"
 import { rhythm, scale } from "../utils/typography"
 import styled from "styled-components";
@@ -31,14 +32,10 @@ class Layout extends React.Component {
         <Header title={title} location={location} />
         <ContentWrapper>
           <Content>
-          <main>{children}</main>
+            <main>{children}</main>
           </Content>
         </ContentWrapper>
-        <footer>
-          © {new Date().getFullYear()} 13imi, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <Footer />
         <GlobalStyle />
       </div>
       </ThemeProvider>
