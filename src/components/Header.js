@@ -4,7 +4,9 @@ import styled from "styled-components";
 
 const HeaderTag = styled.header`
     width: 100%;
-    padding; 16px 0;
+    padding: 16px 0;
+    text-align: center;
+    background-color: ${props => props.theme.colors.acc};
 `;
 
 const HeaderInner = styled.div`

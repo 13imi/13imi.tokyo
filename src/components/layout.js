@@ -4,8 +4,22 @@ import { ThemeProvider } from "styled-components";
 import GlobalStyle from "../styles/global";
 import theme from "../styles/theme";
 import Header from "../components/Header"
-
+import ContentWrapper from "../components/ContentWrapper"
 import { rhythm, scale } from "../utils/typography"
+import styled from "styled-components";
+
+const Content = styled.div`
+  margin-top: 2em;
+  display: flex;
+  min-height: 85vh;
+  align-items: flex-start;
+  @media screen and (max-width: ${props => props.theme.responsive.large}) {
+    display: block;
+  }
+  @media screen and (max-width: ${props => props.theme.responsive.small}) {
+    margin-top: 0;
+  }
+`;
 
 class Layout extends React.Component {
   render() {
@@ -13,16 +27,13 @@ class Layout extends React.Component {
 
     return (
       <ThemeProvider theme={theme}>
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
+      <div className="siteRoot">
         <Header title={title} location={location} />
-        <main>{children}</main>
+        <ContentWrapper>
+          <Content>
+          <main>{children}</main>
+          </Content>
+        </ContentWrapper>
         <footer>
           © {new Date().getFullYear()} 13imi, Built with
           {` `}
