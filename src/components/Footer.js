@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import styled from "styled-components";
 import ContentWrapper from "../components/ContentWrapper";
 
@@ -23,7 +24,7 @@ const Footer = () => {
         <FooterContent>
             <ContentWrapper>
                 <FooterInner>
-                    © {new Date().getFullYear()}, 13imi All rights reserved.
+                    © {new Date().getFullYear()}, <Link to={`/`}>13imi</Link> All rights reserved.
                 </FooterInner>
             </ContentWrapper>
         </FooterContent>
