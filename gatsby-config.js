@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `13imi`,
-    author: `13imi`,
+    author: `イミー`,
     description: `@13imiの技術系のことを気軽に綴るサイトです`,
     siteUrl: `https://13imi.tokyo/`,
     social: {
