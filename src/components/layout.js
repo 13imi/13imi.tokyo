@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "../styles/global";
 import theme from "../styles/theme";
+import Bio from "../components/bio"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import ContentWrapper from "../components/ContentWrapper"
@@ -22,6 +23,14 @@ const Content = styled.div`
   }
 `;
 
+const MainWrapper = styled.div`
+  width: calc(100% - ${props => props.theme.sizes.bioWidth} - 40px);
+  margin-right: 40px;
+  @media screen and (max-width: ${props => props.theme.responsive.large}) {
+    width: 100%;
+  }
+`;
+
 class Layout extends React.Component {
   render() {
     const { location, title, children } = this.props
@@ -32,7 +41,10 @@ class Layout extends React.Component {
         <Header title={title} location={location} />
         <ContentWrapper>
           <Content>
+          <MainWrapper>
             <main>{children}</main>
+          </MainWrapper>
+          <Bio />
           </Content>
         </ContentWrapper>
         <Footer />

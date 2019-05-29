@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
+
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PostCard from "../components/PostCard"
@@ -23,7 +23,6 @@ class BlogIndex extends React.Component {
         {posts.map(({ node }) => {
           return <PostCard key={node.fields.slug} node={node} />;
         })}
-               <Bio />
       </Layout>
     )
   }
@@ -46,7 +45,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "YYYY.MM.DD")
             title
             emoji
             description
